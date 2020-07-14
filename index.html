@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=320, height=device-height, target-densitydpi=medium-dpi" />
+
+    <title>DroidLicious</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles -->
+    <link href="static/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body class="bg-light">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-light bg-light static-top">
+        <div class="container">
+            <a class="navbar-brand" href="/"><span class="brand-green">DROID</span><span
+                class="brand-blue">LICIOUS</span></a>
+            <ul class="nav justify-content-end">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link active " href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Masthead -->
+    <header class="masthead text-white text-center">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <h1 class="mb-5"><span class="brand-green">Droid</span><span class="brand-blue">Licious</span>, best solution for studying and classifying Android apps behavior</h1>
+                </div>
+                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Line -->
+
+    <div class="bg-light">
+        <div class="line"></div>
+    </div>
+
+    <!-- Form -->
+
+    <div class="card text-center bg-light features-icons" id="form-style">
+        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+                <i class="fas fa-upload m-auto text-primary"></i>
+            </div>
+            <h3 class="card-title">Upload APK File:</h3>
+            <p class="card-text lead mb-0">To get the analysis report please upload an APK file.</p>
+            <br/>
+            <form id="uploadForm" method="post" action="/" enctype="multipart/form-data" ajax="true">
+                <div class="form-group" id="file-input-style">
+                    <input type="file" class="form-control-file" name="file" autocomplete="off" required>
+                </div>
+                <input type="submit" value="Get Analysis Report" class="btn btn-primary mt-4" id="sButton">
+            </form>
+            <!-- {% if text == "not APK" %} 
+        <div class="container-sm text-center bg-light mt-4" id="notAPK">
+            <div class="alert alert-danger" role="alert" style="max-width: 25rem; margin: auto;">
+                Only APK Files Are Allowed!
+            </div>
+        </div>
+        {% elif text == "error" %}
+        <div class="container-sm text-center bg-light mt-4">
+            <div class="alert alert-warning" role="alert" style="max-width: 25rem; margin: auto;">
+                Sorry, we do not support analysis for this type of applications at this moment.
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% if result == 0 %}
+<div class="container-sm text-center bg-light " id="benign">
+    <div class="card text-white bg-success mb-5" style="max-width: 25rem;margin: auto;">
+        <div class="card-header">Looks Benign</div>
+        <div class="card-body">
+            <h5 class="card-title">The App Doesn't Have Malicious Like Behavior</h5>
+            <p class="card-text">Download Full Report</p>
+            <a href="/{{fileName}}">
+                <button type="button" class="btn btn-outline-light"><i
+                        class="fa fa-download mr-2"></i>Download
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+{% elif result == 1 %}
+<div class="container-sm text-center bg-light " id="malware">
+    <div class="card text-white bg-danger mb-5" style="max-width: 25rem;margin: auto;">
+        <div class="card-header">Looks Malicious</div>
+        <div class="card-body">
+            <h5 class="card-title">The App Has Malicious Like Behavior</h5>
+            <p class="card-text">Download Full Report</p>
+            <a href="/{{fileName}}">
+                <button type="button" class="btn btn-outline-light"><i class="fa fa-download mr-2"></i>Download</button>
+            </a>
+        </div>
+    </div>
+</div>
+{% endif %} -->
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer class="footer bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+                    <p class="text-muted small mb-4 mb-lg-0">&copy; DroidLicious 2020. All Rights Reserved.</p>
+                </div>
+                <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item mr-3">
+                            <a href="#">
+                                <i class="fab fa-github fa-2x fa-fw"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item mr-3">
+                            <a href="#">
+                                <i class="fas fa-envelope fa-2x fa-fw"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="static/script/script.js"></script>
+
+</body>
+
+</html>
